@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Password generator | project</title>
+  </head>
+  <body>
+    <main class="myGenerator">
+      <h1>Password generator</h1>
+      <section class="container">
+        <form class="form-password">
+          <div class="input-form">
+            <div class="block-input">
+              <label for="symbols-choice" class="symbols-choice"
+                >Do i include symbols</label
+              >
+              <input
+                type="checkbox"
+                name="symbols-choice"
+                id="symbols-choice"
+              />
+            </div>
+            <div class="block-input">
+              <label for="number-choice" class="number-choice"
+                >Do i include numbers</label
+              >
+              <input type="checkbox" name="number-choice" id="number-choice" />
+            </div>
+            <div class="block-input">
+              <label for="upper-chars-choice" class="upper-chars-choice"
+                >Do i include uppers characters</label
+              >
+              <input
+                type="checkbox"
+                name="upper-chars-choice"
+                id="upper-chars-choice"
+              />
+            </div>
+          </div>
+          <button type="submit" id="password-button">Generate password</button>
+        </form>
+
+        <div class="password-container">
+          <p id="password-generated">You haven't generate any password</p>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
