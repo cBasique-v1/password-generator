@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Password generator | project</title>
+    <title>Générateur de mot de passe | mini projet HTML / CSS / JS</title>
   </head>
   <body>
     <main class="myGenerator">
-      <h1>Password generator</h1>
+      <h1>Générateur de mot de passe</h1>
       <section class="container">
         <form class="form-password">
           <div class="input-form">
             <div class="block-input">
-              <label for="lenght-choice" class="lenght-choice">Choose the lenght of the password</label>
+              <label for="lenght-choice" class="lenght-choice">Longueur du mot de passe</label>
               <input type="number" name="lenght-choice" id="lenght-choice" min="8" max="40">
             </div>
             <div class="block-input">
               <label for="symbols-choice" class="symbols-choice"
-                >Do i include symbols</label
+                >Ajout de symboles ?</label
               >
               <input
                 type="checkbox"
@@ -28,13 +28,13 @@
             </div>
             <div class="block-input">
               <label for="number-choice" class="number-choice"
-                >Do i include numbers</label
+                >Ajout de nombres</label
               >
               <input type="checkbox" name="number-choice" id="number-choice" />
             </div>
             <div class="block-input">
               <label for="upper-chars-choice" class="upper-chars-choice"
-                >Do i include uppers characters</label
+                >Ajout de caractères majuscules</label
               >
               <input
                 type="checkbox"
@@ -43,11 +43,11 @@
               />
             </div>
           </div>
-          <button type="submit" id="password-button">Generate password</button>
+          <button type="submit" id="password-button">Générer le mot de passe</button>
         </form>
 
         <div class="password-container">
-          <p id="password-generated">You haven't generate any password</p>
+          <p id="password-generated">Aucun mot de passe n'a été généré</p>
         </div>
       </section>
     </main>
