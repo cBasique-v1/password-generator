@@ -1,6 +1,6 @@
 const includeLowerCaseChars = true;
 
-let length = 12;
+var length = 12;
 let includeUpperCaseChars = false;
 let includeSymbolsCaseChars = false;
 let includeNumbersCaseChars = false;
@@ -26,19 +26,21 @@ form.addEventListener("submit", (event) => {
 });
 
 //les 3 parametres de la fonction prennent comme valeur les valeurs des variables de la fonction ci dessus 
-function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, inputLength) {
+function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, nbrLength) {
     //affichage true or false
     console.log(`Lenght of the password ${length}`)
     console.log(`Include Symbols Characters: ${includeSymbols}`);
     console.log(`Include numbers: ${includeNumbers}`);
     console.log(`Include Upper Characters: ${includeUpperChars}`);
 
+    //réattribution des valeurs aus variables de bases
     includeSymbolsCaseChars = includeSymbols;
     includeNumbersCaseChars = includeNumbers;
     includeUpperCaseChars = includeUpperChars;
-    length = inputLength;
+    length = nbrLength;
 }
 
+//génération du mot de passe en fonction des valeurs précédentes
 function generatedPassword(length, includeLowerCaseChars, includeNumbersCaseChars, includeSymbolsCaseChars, includeUpperCaseChars) {
     const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
     const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -52,6 +54,8 @@ function generatedPassword(length, includeLowerCaseChars, includeNumbersCaseChar
     allowedChars += includeUpperCaseChars ? upperCaseChars : "";
     allowedChars += includeNumbersCaseChars ? numbersChars : "";
     allowedChars += includeSymbolsCaseChars ? symbolsChars : "";
+
+    console.log(`longueur du mot de passe: ${length}`)
 
     for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
