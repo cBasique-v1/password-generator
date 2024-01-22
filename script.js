@@ -1,6 +1,6 @@
-const length = 12;
 const includeLowerCaseChars = true;
 
+let length = 12;
 let includeUpperCaseChars = false;
 let includeSymbolsCaseChars = false;
 let includeNumbersCaseChars = false;
@@ -17,21 +17,26 @@ form.addEventListener("submit", (event) => {
     let inputSymbols = document.getElementById("symbols-choice").checked;
     let inputNumbers = document.getElementById("number-choice").checked;
     let inputUpperChars = document.getElementById("upper-chars-choice").checked;
+    
+    //on récupère l'input de type nombre
+    let inputLength = document.getElementById("lenght-choice").value;
 
     //enregistre les valeurs des variables ci dessus
-    checkboxValue(inputSymbols, inputNumbers, inputUpperChars);
+    checkboxValue(inputSymbols, inputNumbers, inputUpperChars, inputLength);
 });
 
 //les 3 parametres de la fonction prennent comme valeur les valeurs des variables de la fonction ci dessus 
-function checkboxValue(includeSymbols, includeNumbers, includeUpperChars) {
+function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, length) {
     //affichage true or false
-    console.log("Include Symbols:", includeSymbols);
-    console.log("Include Numbers:", includeNumbers);
-    console.log("Include Upper Characters:", includeUpperChars);
+    console.log(`Lenght of the password ${length}`)
+    console.log(`Include Symbols Characters: ${includeSymbols}`);
+    console.log(`Include numbers: ${includeNumbers}`);
+    console.log(`Include Upper Characters: ${includeUpperChars}`);
 
     includeSymbolsCaseChars = includeSymbols;
     includeNumbersCaseChars = includeNumbers;
     includeUpperCaseChars = includeUpperChars;
+    inputLength = length;
 }
 
 function generatedPassword(length, includeLowerCaseChars, includeNumbersCaseChars, includeSymbolsCaseChars, includeUpperCaseChars) {
