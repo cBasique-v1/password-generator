@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
 });
 
 //les 3 parametres de la fonction prennent comme valeur les valeurs des variables de la fonction ci dessus 
-function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, length) {
+function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, inputLength) {
     //affichage true or false
     console.log(`Lenght of the password ${length}`)
     console.log(`Include Symbols Characters: ${includeSymbols}`);
@@ -36,7 +36,7 @@ function checkboxValue(includeSymbols, includeNumbers, includeUpperChars, length
     includeSymbolsCaseChars = includeSymbols;
     includeNumbersCaseChars = includeNumbers;
     includeUpperCaseChars = includeUpperChars;
-    inputLength = length;
+    length = inputLength;
 }
 
 function generatedPassword(length, includeLowerCaseChars, includeNumbersCaseChars, includeSymbolsCaseChars, includeUpperCaseChars) {
@@ -62,7 +62,8 @@ function generatedPassword(length, includeLowerCaseChars, includeNumbersCaseChar
 }
 
 document.getElementById("password-button").onclick = function () {
-    const password = generatedPassword(length,
+    const password = generatedPassword(
+        length,
         includeLowerCaseChars,
         includeNumbersCaseChars,
         includeSymbolsCaseChars,
