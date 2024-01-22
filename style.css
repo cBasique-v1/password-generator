@@ -1,55 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Manrope';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
 }
 
-.myGenerator{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.myGenerator {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    background-color: #38bdf8;
+  background: url(./images/background-1.jpeg);
+  background-size: cover;
 }
 
-.container{
-    margin: 3rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+.container {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-.form-password{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+.form-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.input-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+.input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.block-input{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 18rem;
-    font-size: 1.2rem;
+.block-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 18rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 input[type="checkbox"] {
@@ -61,20 +63,30 @@ input[type="checkbox"] {
   border-radius: 0.15em;
 }
 
-#password-button{
-    padding: 0.5rem 0.8rem;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 0 4px 2px rgb(60, 60, 104);
-    background-color: #38bdf8;
-    color: azure;
-    font-size: 1.5rem;
+input[type="number"] {
+  background-color: #fff;
+  margin: 1rem;
+  width: 5rem;
+  height: 2rem;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  text-align: center;
 }
 
-#password-generated{
-    font-size: 1.2rem;
-    background-color: aliceblue;
-    border-radius: 5px;
-    padding: 0.5rem 0.8rem;    
-    box-shadow: 0 0 4px 2px rgb(87, 87, 136);
+#password-button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 4px 2px rgb(60, 60, 104);
+  background-color: #38bdf8;
+  color: azure;
+  font-size: 1.5rem;
+}
+
+#password-generated {
+  font-size: 1.2rem;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  box-shadow: 0 0 4px 2px rgb(87, 87, 136);
 }
